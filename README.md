@@ -28,12 +28,16 @@ console.log("Cheaper than 10:", cheaperThan10);
 ```javascript
 array.forEach(function(){})
 ```
+Beispielsweise (s. auch ../for-Assessment24sep24/map-filter-forEach.js)
+```javascript
+const arr = numbers.forEach((item) => console.log(item * 2));
+
+console.log(arr);
+```
 #
 
-## .includes()
-* [MDN link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
-* aus der Aufgabe
-- PB_Aufgaben/240819-pb-function-challenges-2
+## [.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
+* aus der Aufgabe ***PB_Aufgaben/240819-pb-function-challenges-2***
 
 ```javascript
 const removeVowels = string => {
@@ -109,8 +113,7 @@ console.log(a[0] === b) // true
 ```
 #
 ## .reduce() 
-* array method
-* [MDN link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
+* [array method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 mdn web docs array.prototype.reduce()
 #
 ## .reduce() um zu sortieren
@@ -126,15 +129,14 @@ const mostExpensive = shoppingBasket.reduce((prev,next)=>{
 });
 ```
 #
-## .reverse()
+## [.reverse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
 * array method; reverses the order of all array elements
-* [MDN link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
 #
 ## .slice() vs. .splice()
 * slice() kopiert einen Teil des Arrays und returns den kopierten Teil als ein neues Array. Das Orginal Array wird nicht verändert.
 * splice() adds oder removes elemente vom Orginalarray. Wir ändern das array.
 #
-## .sort() 
+## [.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 * array method
 * [MDN link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort):
  kompliziert
