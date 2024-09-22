@@ -5,9 +5,9 @@
 - 
 #
 
-### weiteres Lesematerial;
+### Nutzliche Links, weiteres Lesematerial;
 📚️ [w3 schools link](https://www.w3schools.com/js/js_array_methods.asp)
-- [array-cheatsheet](https://clubmate.fi/array-cheat-sheet)
+- [array-cheatsheet](https://clubmate.fi/array-cheat-sheet) : sehr nutzlich; durchsuchbar. N.B. besser im Brave-Browser
 #
 
 ## .filter() 
@@ -21,6 +21,24 @@ PB_Aufgaben/240909-pb-function-2-filter-general:
 ```javascript
 const cheaperThan10 = products.filter(item => item.price < 10);
 console.log("Cheaper than 10:", cheaperThan10);
+```
+#
+## [.find()](https://clubmate.fi/array-cheat-sheet?s=find)	
+* Finds the first item in an array that matches.	
+
+```javascript
+let a = [5, 12, 8, 130, 44]
+let b = a.find(v => v > 10)
+console.log(b) // 12
+```
+#
+## [.findIndex()](https://clubmate.fi/array-cheat-sheet?s=find)
+* Like **.find()** , but instead of returning the item, it returns the index.	
+
+```javascript
+let a = [5, 12, 8, 130, 44]
+let b = a.findIndex(v => v > 13)
+console.log(b) // 3 
 ```
 #
 ## [.forEach() ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
@@ -58,7 +76,7 @@ console.log(removeVowels("AEIOU")); // ""
 console.log(removeVowels("ABCDe")); // "BCD"
 ```
 #
-## [.indexOf()](https://clubmate.fi/array-cheat-sheet)	
+## [.indexOf()](https://clubmate.fi/array-cheat-sheet?s=index)	
 * Finds the first index of an element. Returns -1 if not found.	
 
 ```javascript
@@ -113,9 +131,22 @@ a.push(b)
 console.log(a[0] === b) // true
 ```
 #
-## .reduce() 
-* [array method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
-mdn web docs array.prototype.reduce()
+## [.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
+* array method
+```javascript
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+
+```
 #
 ## .reduce() um zu sortieren
 * [repo; 21-reduce-sort/livecoding/reduce-02.js:](https://github.com/dci-fbw-wd-tz-24-d01/programming-basic/blob/main/21-reduce-sort/livecoding/reduce-02.js) 
@@ -132,22 +163,48 @@ const mostExpensive = shoppingBasket.reduce((prev,next)=>{
 #
 ## [.reverse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
 * array method; reverses the order of all array elements
+* Anwendung auf string: **string.split("").reverse("").join("")**
 #
 ## .slice() vs. .splice()
 * slice() kopiert einen Teil des Arrays und returns den kopierten Teil als ein neues Array. Das Orginal Array wird nicht verändert.
-* splice() adds oder removes elemente vom Orginalarray. Wir ändern das array.
-#
-## [.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-* array method
-* [MDN link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort):
- kompliziert
+* [.slice()](https://clubmate.fi/array-cheat-sheet?s=slice)	Returns a portion of an array selected with the start and end parameters.	
+```javascript
+let a = ['ant', 'bison', 'camel', 'duck', 'elephant']
+console.log(animals.slice(2)) // ["camel", "duck", "elephant"]
+console.log(animals.slice(2, 4)) // ["camel", "duck"]
+```
+* [splice()](https://clubmate.fi/array-cheat-sheet?s=splice) adds oder removes elemente vom Orginalarray. Wir ändern das array.
+- - **adding**
+- - ***reorganizing***
+- - ***removing***: Remove elements from the middle of an array. Param 1: index to start removing. Param 2: index to stop removing.	
 
+```javascript
+let a = ['a', 'b', 'c', 'd', 'e']
+a.splice(1, 3)
+console.log(a) // ["a", "e"]
+```
+#
+## [.sort()]()
+* array method
+* .sort()	Sort numerically.	
+.sort()	Sort numerically.	
+```javascript
+let a = [5, 10, 7, 1, 3, 2]
+a.sort((a, b) => a - b)   // a - b : ascending; default
+console.log(a) // [ 1, 2, 3, 5, 7, 10]
+```
+* .sort().reverse()	Sort in reversed alphabetical order.	
+```javascript
+let a = ['d', 'j', 'a', 'b', 'c', 'g']
+a.sort().reverse()
+console.log(a) // [ "j", "g", "d", "c", "b", "a"]
+```
 * - aus der Aufgabe:
  *PB_Aufgaben/240910-pb-function-2-sort-basic:*
 
 ```javascript
 function descendingRating(bookA, bookB) {
-  return bookB.rating - bookA.rating;
+  return bookB.rating - bookA.rating;       // b - a : descending
 }
 let result = [...books].sort(descendingRating);
 console.log(result);
