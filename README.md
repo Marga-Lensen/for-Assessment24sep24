@@ -199,6 +199,12 @@ let a = ['d', 'j', 'a', 'b', 'c', 'g']
 a.sort().reverse()
 console.log(a) // [ "j", "g", "d", "c", "b", "a"]
 ```
+* .sort()	Descending numerical sort (flip the `a` anb `b` around).	
+```javascript
+let a = [5, 10, 7, 1, 3, 2]
+a.sort((a, b) => b - a)
+console.log(a) // [10, 7, 5 ,3, 2, 1]
+```
 * - aus der Aufgabe:
  *PB_Aufgaben/240910-pb-function-2-sort-basic:*
 
