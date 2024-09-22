@@ -29,7 +29,7 @@ console.log("Cheaper than 10:", cheaperThan10);
 ```javascript
 array.forEach(function(){})
 ```
-Beispielsweise (s. auch ../for-Assessment24sep24/map-filter-forEach.js)
+Beispielsweise (s. auch [../for-Assessment24sep24/map-filter-forEach.js](https://github.com/Marga-Lensen/for-Assessment24sep24/blob/main/map-filter-forEach.js))
 ```javascript
 const arr = numbers.forEach((item) => console.log(item * 2));
 
