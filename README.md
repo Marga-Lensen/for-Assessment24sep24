@@ -12,6 +12,7 @@
 
 ## .filter() 
  *  array.filter()  => newArr ; maximal so lang wie original array (Auswahl)
+ * die angewandte function ist ein Auswahlkriterium
 
 -  Beispiele aus Aufgaben; 
 
@@ -23,7 +24,7 @@ console.log("Cheaper than 10:", cheaperThan10);
 ```
 #
 ## [.forEach() ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-* array.forEach() ; wie eine **for loop**  ;  macht selber (noch) nichts ; Kombi m function:
+* array.forEach() ; wie eine **for loop**  ;  macht selber (noch) nichts ; Kombi m function (ausgabe m console.log):
 
 ```javascript
 array.forEach(function(){})
@@ -76,8 +77,8 @@ string.split("").reverse().join("")
 ## [.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys)  /   .values()   /   .entries()
 #
 ## .map() 
-*  array.map()   => newArr      
-- genauso lang wie original array
+*  array.map()   => newArr ; genauso lang wie original array (jedes Element w transformiert und wieder ausgegeben)
+* die angewandte function macht das gleiche mit jedem element
 
 -  Beispiele aus Aufgaben; 
 
