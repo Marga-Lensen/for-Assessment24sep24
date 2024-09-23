@@ -8,8 +8,19 @@
 ### Nutzliche Links, weiteres Lesematerial;
 📚️ [w3 schools link](https://www.w3schools.com/js/js_array_methods.asp)
 - [array-cheatsheet](https://clubmate.fi/array-cheat-sheet) : sehr nutzlich; durchsuchbar. N.B. besser im Brave-Browser
+- [codecademy](https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-arrays/cheatsheet)
 #
+## [.concat()](https://clubmate.fi/array-cheat-sheet?s=concat)
+* array method - Create a new array from two arrays.	
 
+```javascript
+let x = ['a', 'b', 'c']
+let y = ['d', 'e', 'f']
+let z = x.concat(y)
+console.log(z) // ['a', 'b', 'c', 'd', 'e', 'f']
+```
+
+#
 ## .filter() 
  *  array.filter()  => newArr ; maximal so lang wie original array (Auswahl)
  * die angewandte function ist ein Auswahlkriterium
@@ -41,6 +52,25 @@ let b = a.findIndex(v => v > 13)
 console.log(b) // 3 
 ```
 #
+## [.flat ()](https://clubmate.fi/array-cheat-sheet?s=flat)
+* array method -	Flatten a **nested** array.	
+
+```javascript
+let a = [0, 1, 2, [3, 4]]
+let b = a.flat()
+console.log(b) // [0, 1, 2, 3, 4]
+```
+#
+## .flatMap()
+* array method -	Same as map but it flattens the array, same as: [[]].map(v => v).flat().	
+
+```javascript
+let a = [1, 2, 3, 4]
+let b = a.flatMap(v => [v * 2])
+console.log() // 2, 4, 6, 8
+```
+#
+
 ## [.forEach() ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 * array.forEach() ; wie eine **for loop**  ;  macht selber (noch) nichts ; Kombi m function (ausgabe m console.log):
 
@@ -187,7 +217,6 @@ console.log(a) // ["a", "e"]
 ## [.sort()]()
 * array method
 * .sort()	Sort numerically.	
-.sort()	Sort numerically.	
 ```javascript
 let a = [5, 10, 7, 1, 3, 2]
 a.sort((a, b) => a - b)   // a - b : ascending; default
