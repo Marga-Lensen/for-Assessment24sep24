@@ -5,7 +5,7 @@
 - 
 #
 
-### Nutzliche Links, weiteres Lesematerial;
+### Nutzliche Links, weiteres Lesematerial, CHEATSHEETS !;
 📚️ [w3 schools link](https://www.w3schools.com/js/js_array_methods.asp)
 - [array-cheatsheet](https://clubmate.fi/array-cheat-sheet) : sehr nutzlich; durchsuchbar. N.B. besser im Brave-Browser
 - [codecademy](https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-arrays/cheatsheet)
