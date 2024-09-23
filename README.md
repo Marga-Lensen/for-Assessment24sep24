@@ -245,5 +245,20 @@ let result = [...books].sort(descendingRating);
 console.log(result);
 ```
 #
+## [.toString()](https://clubmate.fi/array-cheat-sheet?s=string)
+* array method - Turn array or any other object into a string.	
+```javascript
+let a = ['foo', 'bar', 'baz']
+a.join() // foo,bar,baz
+```
+# 
+## .toLocaleString()
+* array method -	Stringifies an array in a locale sensitive way.	
+```javascript
+let a = [1, 'a', new Date('21 Dec 1997 14:12:00 UTC')]
+a.toLocaleString('en', { timeZone: 'UTC' }) // 1,a,12/21/1997, 2:12:00 PM
+a.toLocaleString('de') // '1,a,21.12.1997, 15:12:00'
+```
+#
 ## .trim()
 * entfernt Lesezeichen vor und nach String
