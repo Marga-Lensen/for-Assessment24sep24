@@ -70,8 +70,16 @@ let b = a.flatMap(v => [v * 2])
 console.log() // 2, 4, 6, 8
 ```
 #
+## [.forEach()](https://clubmate.fi/array-cheat-sheet?s=foreach)
+* array method - Executes a function for every element in array, does not return anything.	
+```javascript
+let a = [1, 2]
+a.forEach(x => console.log(x))
+// 1
+// 2
+```
+### [.forEach() ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 
-## [.forEach() ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 * array.forEach() ; wie eine **for loop**  ;  macht selber (noch) nichts ; Kombi m function (ausgabe m console.log):
 
 ```javascript
@@ -123,6 +131,7 @@ string.split("").reverse().join("")
 ```
 #
 ## [.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys)  /   .values()   /   .entries()
+* OBJECT METHODS !!!!!
 #
 ## .map() 
 *  array.map()   => newArr ; genauso lang wie original array (jedes Element w transformiert und wieder ausgegeben)
@@ -151,8 +160,16 @@ let größteZahl = Math.max(...zahlen);
 console.log(größteZahl); // Gibt 20 aus
 ```
 #
+## .pop()
+* array method - ***Removes*** the last element from array and returns it. Changes the length of the array.	
+```javascript
+let a = ['a', 'b', 'c']
+console.log(a.pop()) // c
+console.log(a) // ["a", "b"]
+```
+#
 ## .push() 
-* .push()	Add anything to the end of an array.	
+* .push()	***Add*** anything to the end of an array.	
 
 ```javascript
 let a = []
@@ -194,6 +211,14 @@ const mostExpensive = shoppingBasket.reduce((prev,next)=>{
 ## [.reverse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
 * array method; reverses the order of all array elements
 * Anwendung auf string: **string.split("").reverse("").join("")**
+#
+## [.shift()](https://clubmate.fi/array-cheat-sheet?s=shift)
+* array method - Like pop but ***removes*** the first element from array and returns it. Also changes the length of the array.	
+```javascript
+let a = ['a', 'b', 'c']
+console.log(a.shift()) // a
+console.log(a) // ["b", "c"]
+```
 #
 ## .slice() vs. .splice()
 * slice() kopiert einen Teil des Arrays und returns den kopierten Teil als ein neues Array. Das Orginal Array wird nicht verändert.
@@ -262,3 +287,11 @@ a.toLocaleString('de') // '1,a,21.12.1997, 15:12:00'
 #
 ## .trim()
 * entfernt Lesezeichen vor und nach String
+#
+## [.unshift()](https://clubmate.fi/array-cheat-sheet?s=unshift)
+* array method -	Add to the beginning of array and **returns the new length of the array**.	
+```javascript
+let x = ['c', 'd']
+x.unshift('a', 'b') // 4        // aufpassen, hier kommt x.length 
+console.log(x) // ['a', 'b', 'c', 'd']    // array x ausgeben
+```
